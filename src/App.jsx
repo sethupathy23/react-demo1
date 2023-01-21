@@ -1,4 +1,5 @@
 // import "./App.css";
+import { useState } from "react";
 
 // export default function App() {
 //   return (
@@ -92,24 +93,45 @@ import "./App.css";
       <h1>
         Hello,<span className="user-name">{name}</span>
       </h1>
+      <Counter />
     </div>
   );
 }
 
-      // function Welcome({name}){
-      //   return(
-      //     <div className="usr-name">
-      //       <h1>
-      //          Hello, <span className="particularname">am {name} </span>
-      //       </h1>
-         
-      //     </div>
-      //   )
-      // }
+  // function Counter(){
+  //   // let like = 10;
+  //   const [like,setLike]=useState(0);
+  //   return(
+  //     <div>
+  //       <button 
+  //       onClick={() => setLike(like + 1)
+  //       }>
+  //         Like
+          
+  //       </button>
+  //       <p>{like
+  //       }</p>
 
+  //     </div>
+  //   )
+  // }
 
-
-
+  function Counter(){
+    const [state,setState]=useState(10);
+    return(
+    <div className = "Heart">
+    <button
+    onClick={()=>setState(state+1) }
+    >
+   <h1>Heart🧡💚💜 {state}</h1>
+    
+    </button>
+    <p></p>
+    </div>
+    
+    )
+  }
+ 
 
 
 
