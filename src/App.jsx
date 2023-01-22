@@ -1,58 +1,5 @@
-// import "./App.css";
-import { useState } from "react";
-
-// export default function App() {
-//   return (
-//     <div className="App">
-//           {/* itha vanthu loop potu code olunga kaga vaika porom  */}
-//       <Msg
-//        //props inga anapitu
-
-//         name="Kumar"
-//         pic="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=400"
-//       />
-//       <Msg
-//         name="Raju"
-//         pic="https://i.pinimg.com/564x/0a/53/c3/0a53c3bbe2f56a1ddac34ea04a26be98.jpg"
-//       />
-
-//       <Msg
-//         name="Shofiya"
-//         pic="https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-//       />
-      
-      
-//       <Msg
-//         name="Revi"
-//         pic="https://images.pexels.com/photos/14959637/pexels-photo-14959637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-//       />
-
-//       <Msg
-//         name="czech"
-//         pic="https://perfectczechwomen.com/wp-content/uploads/2019/04/New-Profile-15-500x580.jpg"
-//       />
-//     </div>
-//   );
-// }
-
-// //component declaration
-// //inga props vangikrom
-// function Msg({ pic, name }) {
-//   return (
-//     //jsx starts here
-//     <div className="usrname">
-//       <img className="usr-pic" src={pic} alt={name} />
-//       <h1>
-//         hello am <span className="usr-name">{name}</span>
-//       </h1>
-//     </div>
-//     //jsx ends here
-//   );
-// }
-
-//day-3
-
 import "./App.css";
+import { useState } from "react";
  export default function App() {
   const names=["sethupathy", "robert","Ajith"];
   const users=[
@@ -97,41 +44,25 @@ import "./App.css";
     </div>
   );
 }
-
-  // function Counter(){
-  //   // let like = 10;
-  //   const [like,setLike]=useState(0);
-  //   return(
-  //     <div>
-  //       <button 
-  //       onClick={() => setLike(like + 1)
-  //       }>
-  //         Like
-          
-  //       </button>
-  //       <p>{like
-  //       }</p>
-
-  //     </div>
-  //   )
-  // }
-
-  function Counter(){
-    const [state,setState]=useState(10);
+ function Counter (){
+    const [like,setLike]=useState(0);
+    const [dislike,setDislike]=useState(0);
     return(
     <div className = "Heart">
     <button
-    onClick={()=>setState(state+1) }
+    onClick={()=>setLike(like+1) }
     >
-   <h1>Heart🧡💚💜 {state}</h1>
+   <h1>Heart🧡💚💜 {like}</h1>
     
+    </button>
+    <button 
+    onClick={()=>setDislike(dislike+1)}
+    >
+      <h1>BrokenHeart💔{dislike}</h1>
+
     </button>
     <p></p>
     </div>
     
     )
   }
- 
-
-
-
