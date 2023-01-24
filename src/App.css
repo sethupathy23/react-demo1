@@ -1,29 +1,63 @@
 .App {
   font-family: sans-serif;
-  text-align: center;
-}
-.usr-pic {
-  height: 250px;
-  width: 250px;
-  border-radius: 50%;
-  object-fit: center;
-}
-.usr-name {
-  color: orange;
+  /* text-align: center; */
 }
 
-.particularname {
-  color: black;
+.Movie-container{
+  background:  #deeaee; /*#e6e2d3 */
+  width: 340px;
+}
+.movie-poster{
+width:340px;
+height: 640px;
+object-fit: cover;
+}
+.movie-specs{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.movie-name{
+  font-size: 24px;
+  margin:0;
+
+}
+.movie-rating{
+  font-size: 20px;
+  font-style: normal;
+}
+.movie-summary{
+  margin-tops:0;
 }
 
-.user-pic {
-  height: 300px;
-  width: 300px;
-  border-radius: 50%;
-  object-fit: center;
+/* // responsive pandrathuku  kodukrom*/
+/* .movie-list { */
+  /* display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content:space-around; */
+
+  /* display: grid; */
+  /* fr = fractional unit */
+  /* grid-template-columns: 1fr 1fr 1fr;  repeat (3,1fr); */
+  /* gap: 16px; */
+  
+  /* gap: 5px; */
+  /* // naduvula irukurathu matum perusa theriyum  but enaku varala o/p*/
+   /* display: grid; 
+  grid-template-columns: 1fr 2fr 1fr;   */
+/* } */
+
+.movie-list {
+  display:grid;
+  /* grid la responsive akurathuku RAM use pandrom*/ 
+  grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
+  gap:16px;
+  justify-items: center;/*1fr layum centre la show oandrathukaga kodukurom*/
+
 }
-.Heart {
-  /* height:10px; */
-  /* width:20px; */
-  margin: 50px;
+.Heart{
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
 }
