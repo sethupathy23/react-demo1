@@ -6,6 +6,7 @@
 .Movie-container{
   background:  #deeaee; /*#e6e2d3 */
   width: 340px;
+  height:min-content;
 }
 .movie-poster{
 width:340px;
@@ -61,3 +62,36 @@ object-fit: cover;
   align-items: center;
   justify-content: flex-start;
 }
+.add-movie-form {
+  display:flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: 10px auto; 
+
+}
+
+.game-box {
+  border: 1px solid black;
+  font-size: 160px;
+  height: 160px;
+  width: 160px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor:pointer;
+
+}
+.game-box:hover{
+  background: hsl(0deg 0% 0% / 6%);
+}
+.board{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: min-content;
+  margin: 16px auto;
+}
+.tic-tac-toe{
+  text-align:center;
+}  
