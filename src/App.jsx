@@ -4,6 +4,7 @@ import { MovieList } from "./MovieList";
 import { Counter } from "./Counter";
 import { TicTacToe } from "./TicTacToe";
 import { Routes, Route, Link } from "react-router-dom";
+import { Home } from "./Home";
 
  export default function App() {
  return (
@@ -11,10 +12,11 @@ import { Routes, Route, Link } from "react-router-dom";
       {/* <MovieList /> */}
       {/* <AddColor /> */}
       {/* <Counter /> */}
-      <TicTacToe />
+      {/* <TicTacToe /> */}
+
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/TicTacToe" element={<TicTacToe />} />
+        {/* <Route path="/TicTacToe" element={<TicTacToe />} /> */}
       </Routes>
     </div>
       );
