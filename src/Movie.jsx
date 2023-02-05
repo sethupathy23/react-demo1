@@ -9,10 +9,12 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
+import InfoIcon from '@mui/icons-material/Info';
+import { useNavigate } from "react-router-dom";
 
 //practice
 
-export function Movie({ movie }) {
+export function Movie({ movie, id,deleteButton,getMovies}) {
   //conditional styling / ? : = Ternary operator
   const styles = {
     color: movie.rating > 8.5 ? "green" : "red",
@@ -30,6 +32,8 @@ export function Movie({ movie }) {
   //   "rating": 8.4,
   //   "summary": "Members of a black ops team must track and eliminate a gang of masked murderers."
   // };
+
+  const navigate = useNavigate(); 
   return (
     <Card className="Movie-container">
       <img className="movie-poster" src={movie.poster} alt={movie.name} />
@@ -41,7 +45,15 @@ export function Movie({ movie }) {
        >
          {/* //conditional rendering */}
        {show ? <ExpandLessIcon /> : <ExpandMoreIcon />} 
-      </IconButton></h2>
+      </IconButton>
+      <IconButton color="primary"
+       onClick={() => navigate("/movies/" + id)}  
+        aria-label="Movie details"
+       >
+         {/* //conditional rendering */}
+        < InfoIcon />  
+      </IconButton>
+      </h2>
         <p style={styles} className="movie-rating">⭐{movie.rating}</p>
       </div>
       {/* conditional styling */}
@@ -50,7 +62,7 @@ export function Movie({ movie }) {
       {show ? <p className="movie-summary">{movie.summary}</p> : null}
       </CardContent>
       <CardActions>
-        <Counter />
+        <Counter /> {deleteButton}
       </CardActions>
       
 

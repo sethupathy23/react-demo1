@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import IconButton from '@mui/material/IconButton';
 import Stack from '@mui/material/Stack';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 export function Counter() {
   const [like, setLike] = useState(0);
-  const [dislike, setDislike] = useState(0);
+  const [disLike, setDisLike] = useState(0);
+  // useEffect(()=>{
+  //   console.log("like value is update: " , like)
+  // },[like, disLike]);
   return (
     <div className="Heart">
       <IconButton aria-label="delete">
@@ -18,7 +21,7 @@ export function Counter() {
 
       </button>
       <button
-        onClick={() => setDislike(dislike + 1)}
+        onClick={() => setDisLike(dislike + 1)}
       >
         <h1>💔{dislike}</h1>
 

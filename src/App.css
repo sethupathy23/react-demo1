@@ -95,3 +95,16 @@ object-fit: cover;
 .tic-tac-toe{
   text-align:center;
 }  
+.not-found{
+  width: 100%;
+  object-fit: cover;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.Movie-detail-container{
+  max-width: 750px;
+}
+body{
+  margin: 0;
+}
