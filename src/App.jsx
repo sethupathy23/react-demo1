@@ -3,10 +3,10 @@ import { AddColor } from "./AddColor";
 import { MovieList } from "./MovieList";
 import { Counter } from "./Counter";
 import { TicTacToe } from "./TicTacToe";
-import { Routes, Route, Link, useNavigate, useEffect} from "react-router-dom";
+import { Routes, Route, Link, useNavigate} from "react-router-dom";
 // import { NotFound } from "./NotFound";
 // import { Home } from "./Home";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Button from '@mui/material/Button';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -21,6 +21,7 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { borderRadius } from "@mui/system";
 import { AddMovie } from "./AddMovie";
 import { MovieDetails } from "./MovieDetails";
+import { API } from "../global";
 
 
  export default function App() {
@@ -43,7 +44,7 @@ import { MovieDetails } from "./MovieDetails";
   const [movieList, setMovieList] = useState([]);
 
   useEffect(()=>{
-  fetch("https://63dcb12ec45e08a0435e4759.mockapi.io/movies")
+  fetch(`${API}/movies`)
    .then((data)=> data.json())
    .then((mvs)=> setMovieList(mvs));
  },[]);

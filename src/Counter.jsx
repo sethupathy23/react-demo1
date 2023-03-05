@@ -23,7 +23,7 @@ export function Counter() {
       <button
         onClick={() => setDisLike(dislike + 1)}
       >
-        <h1>💔{dislike}</h1>
+        <h1>💔{disLike}</h1>
 
       </button>
       <p></p>

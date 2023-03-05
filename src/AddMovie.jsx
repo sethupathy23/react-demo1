@@ -2,6 +2,7 @@ import { useState } from "react";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useNavigate } from "react-router-dom";
+import { API } from "../global";
 
 export function AddMovie() {
   const [name, setName] = useState("");
@@ -19,7 +20,7 @@ export function AddMovie() {
       trailer:trailer,
     };
     console.log(newMovie);
-    await fetch("https://63dcb12ec45e08a0435e4759.mockapi.io/movies", {
+    await fetch(`${API}/movies`, {
       method:"POST",
       body: JSON.stringify (newMovie),
       headers:{
