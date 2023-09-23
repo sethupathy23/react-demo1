@@ -126,11 +126,7 @@ function EditMovieForm({ movie }) {
         Save
       </Button> //check pannanum
       {/* <p>{Name} - {Poster} - {Rating}- {Summary}</p> */}
-
-
-
-
-    </div>
+</div>
   );
 }
 
