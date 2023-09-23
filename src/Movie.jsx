@@ -8,12 +8,10 @@ import {Counter} from "./Counter"
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+
 import InfoIcon from '@mui/icons-material/Info';
 import { useNavigate } from "react-router-dom";
-// import { useNavigate } from react;
 
-//practice
 
 export function Movie({ movie, id,deleteButton,getMovies}) {
   //conditional styling / ? : = Ternary operator
@@ -26,13 +24,6 @@ export function Movie({ movie, id,deleteButton,getMovies}) {
   const summarystyles = {
     display: show ? "block" : "none",
   };
-  // const movie=
-  // {
-  //   "name": "Vikram",
-  //   "poster": "https://m.media-amazon.com/images/M/MV5BMmJhYTYxMGEtNjQ5NS00MWZiLWEwN2ItYjJmMWE2YTU1YWYxXkEyXkFqcGdeQXVyMTEzNzg0Mjkx._V1_.jpg",
-  //   "rating": 8.4,
-  //   "summary": "Members of a black ops team must track and eliminate a gang of masked murderers."
-  // };
 
   const navigate = useNavigate(); 
   return (
@@ -48,7 +39,7 @@ export function Movie({ movie, id,deleteButton,getMovies}) {
        {show ? <ExpandLessIcon /> : <ExpandMoreIcon />} 
       </IconButton>
       <IconButton color="primary"
-       onClick={() => navigate("/movies/" + id)}  
+       onClick={() => navigate(`/movies/${id}`)}  
         aria-label="Movie details"
        >
          {/* //conditional rendering */}
@@ -65,9 +56,6 @@ export function Movie({ movie, id,deleteButton,getMovies}) {
       <CardActions>
         <Counter /> {deleteButton}
       </CardActions>
-      
-
-
-    </Card>
+      </Card>
   );
 }

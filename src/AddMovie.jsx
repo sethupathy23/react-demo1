@@ -55,12 +55,8 @@ export function AddMovie() {
       variant="contained"
       >
         Add Movie
-      </Button> //check pannanum
+      </Button> 
       {/* <p>{Name} - {Poster} - {Rating}- {Summary}</p> */}
-
-
-
-
-    </div>
+</div>
   );
 }
